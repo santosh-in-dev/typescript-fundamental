@@ -1,6 +1,6 @@
 import { productsURL } from '../lib';
 
-const prefix = '🐉 ';
+const prefix = '🐉';
 
 type ProductType = {
   id: number;
