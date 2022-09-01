@@ -25,5 +25,6 @@ enum ProductType {
   Home,
 }
 
+//string literal type
 type ProductTypeList = 'SPORTING' | 'HOME';
 let p: ProductTypeList = 'SPORTING';

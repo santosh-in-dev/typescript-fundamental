@@ -9,7 +9,7 @@ class ProductOutput {
   constructor() {
     this.form.addEventListener('click', (event) => this.submitForm(event));
   }
-
+//We don't need to add function keyword when within a class
   async updateOutput(id: string) {
     this.products = await getProducts();
     const html = this.layoutProducts();

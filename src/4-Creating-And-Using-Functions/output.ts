@@ -18,6 +18,17 @@ export default async function updateOutput(id: string = 'output') {
   }
 }
 
+async function consoleLogUpdateOutput(){
+  const products = await getProducts();
+  const productNames = products.map((p)=> {
+    const name = p.name.toUpperCase();
+    return name;
+  })
+
+  console.log(`Display Production from fetch ${productNames.join(',')}`);
+}
+consoleLogUpdateOutput();
+
 function layoutProducts(products: ProductType[]) {
   const items = products.map(({ id, name, icon }) => {
     const productHtml = `
@@ -123,7 +134,7 @@ function runTheLearningSamples() {
   // CREATE type ProductType
 
   function getProductById(id: number): ProductType | undefined {
-    return sampleProducts.find((p) => (id = p.id));
+    return sampleProducts.find((p) => (id === p.id));
   }
 
   console.log(`${prefix} return ProductType`);
